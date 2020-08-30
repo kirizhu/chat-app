@@ -1,0 +1,23 @@
+.chat-title {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  padding: 10;
+}
+.chat-input {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 65%;
+  height: 60px;
+  padding: 10;
+}
+.chat-button {
+  background-color: #ccc;
+  width: 15%;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 20%;
+  border-radius: 0;
+}
