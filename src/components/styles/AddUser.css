@@ -1,0 +1,21 @@
+.addUser-form {
+  width: 350px;
+  margin: 0 auto;
+  padding: 300px 0px 0px 0px;
+  text-align: center;
+}
+
+.addUser-title {
+  color: white;
+  font-weight: bold;
+  margin: 0px 0px 10px 0px;
+}
+.addUser-input {
+  width: 100%;
+  height: 40px;
+  margin: 0px 0px 10px 0px;
+  padding: 10;
+}
+.addUser-button {
+  width: 100%;
+}

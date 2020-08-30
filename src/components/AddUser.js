@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { receiveUsername } from '../actions/userActions';
+import { receiveUsername } from '../actions/userAction';
+import './styles/AddUser.css';
 //TODO: functional component
 class AddUser extends React.Component {
   //TODO: use hooks
@@ -21,11 +22,14 @@ class AddUser extends React.Component {
 
   render() {
     return (
-      <form style={styles.form} onSubmit={(event) => this.handleClick(event)}>
-        <p style={styles.title}>Username</p>
+      <form
+        className='addUser-form'
+        onSubmit={(event) => this.handleClick(event)}
+      >
+        <p className='addUser-title'>Username</p>
 
         <input
-          style={styles.input}
+          className='addUser-input'
           name='username'
           type='text'
           placeholder='Pick a username'
@@ -35,7 +39,7 @@ class AddUser extends React.Component {
           autoFocus
         />
 
-        <button style={styles.button} type='submit' className='btn btn-primary'>
+        <button type='submit' className='btn btn-primary addUser-button'>
           Join chat
         </button>
       </form>
