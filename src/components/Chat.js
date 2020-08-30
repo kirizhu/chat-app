@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { receiveUsers } from '../actions/userlistActions';
-import { receiveMessage } from '../actions/chatActions';
+import { receiveUsers } from '../actions/userlistAction';
+import { receiveMessage } from '../actions/chatAction';
 import io from 'socket.io-client';
 import UserList from './UserList';
 import Messages from './Messages';
@@ -88,13 +88,13 @@ class Chat extends React.Component {
 
     return (
       <div>
-        <h1 style={styles.title}>Socket.IO Chat</h1>
+        <h1 className='chat-title'>Socket.IO Chat</h1>
 
         <Messages messages={chat.messages} />
 
         <form onSubmit={(event) => this.handleClick(event)}>
           <input
-            style={styles.input}
+            className='chat-input'
             name='message'
             type='text'
             placeholder='Write something'
@@ -103,11 +103,7 @@ class Chat extends React.Component {
             autoFocus
           />
 
-          <button
-            style={styles.button}
-            type='submit'
-            className='btn btn-default'
-          >
+          <button type='submit' className='btn btn-default chat-button'>
             Send
           </button>
         </form>
