@@ -10,6 +10,7 @@ export default function reducer(
         messages: [...state.messages, action.payload],
       };
     }
+    default:
+      return state;
   }
-  return state;
 }

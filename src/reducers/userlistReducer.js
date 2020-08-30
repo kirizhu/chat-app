@@ -11,6 +11,7 @@ export default function reducer(
         userlist: action.payload,
       };
     }
+    default:
+      return state;
   }
-  return state;
 }
