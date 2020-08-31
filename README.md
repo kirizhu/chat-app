@@ -1,7 +1,6 @@
 # chat-app
 
 ![](gif.gif)
-![](gif2.gif)
 
 The Chat client is built using React Redux Socket.io
 
