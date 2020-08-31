@@ -12,7 +12,7 @@ function UserList({ userlist }) {
 
   return (
     <div className='userList-container'>
-      <p className='userList-title'>Users in chat</p>
+      <p className='userList-title'>Users Online</p>
 
       <ul className='userList-ul'>{users}</ul>
     </div>

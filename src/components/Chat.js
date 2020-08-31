@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { receiveUsers } from '../actions/userlistAction';
-import { receiveMessage } from '../actions/chatAction';
+import { addMessage, addUsers } from '../actions';
 import io from 'socket.io-client';
 import UserList from './UserList';
 import Messages from './Messages';
@@ -24,7 +23,7 @@ class Chat extends React.Component {
 
     // receive userlist
     socket.on('chat users', (msg) => {
-      this.props.dispatch(receiveUsers(msg));
+      this.props.dispatch(addUsers(msg));
     });
 
     // send join message
@@ -36,17 +35,17 @@ class Chat extends React.Component {
 
     // receive join message
     socket.on('chat join', (msg) => {
-      this.props.dispatch(receiveMessage(msg));
+      this.props.dispatch(addMessage(msg));
     });
 
     // receive leave message
     socket.on('chat leave', (msg) => {
-      this.props.dispatch(receiveMessage(msg));
+      this.props.dispatch(addMessage(msg));
     });
 
     // receive message
     socket.on('chat message', (msg) => {
-      this.props.dispatch(receiveMessage(msg));
+      this.props.dispatch(addMessage(msg));
     });
 
     // send leave message when user leaves the page
@@ -88,7 +87,7 @@ class Chat extends React.Component {
 
     return (
       <div>
-        <h1 className='chat-title'>Socket.IO Chat</h1>
+        <h1 className='chat-title'>React Chat</h1>
 
         <Messages messages={chat.messages} />
 

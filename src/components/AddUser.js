@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { receiveUsername } from '../actions/userAction';
+import { addUsername } from '../actions';
 import './styles/AddUser.css';
-//TODO: functional component
+
 class AddUser extends React.Component {
-  //TODO: use hooks
   constructor() {
     super();
     this.state = {};
@@ -16,8 +15,7 @@ class AddUser extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
-    //TODO: use useDispatch
-    this.props.dispatch(receiveUsername(this.state.username));
+    this.props.dispatch(addUsername(this.state.username));
   }
 
   render() {
