@@ -6,8 +6,8 @@ import UserList from './UserList';
 import Messages from './Messages';
 import './styles/Chat.css';
 
-//const socket = io('http://localhost:3001');
-const socket = io('https://git.heroku.com/secret-tor-95645.git');
+const socket = io('http://localhost:3001');
+//const socket = io('https://git.heroku.com/secret-tor-95645.git');
 
 class Chat extends React.Component {
   constructor() {
