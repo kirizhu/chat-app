@@ -1,3 +1,4 @@
+import { ADD_MESSAGE } from '../actions';
 export default function reducer(
   state = {
     messages: [],
@@ -5,7 +6,7 @@ export default function reducer(
   action
 ) {
   switch (action.type) {
-    case 'MESSAGE_ADD': {
+    case ADD_MESSAGE: {
       return {
         messages: [...state.messages, action.payload],
       };

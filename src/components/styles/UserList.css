@@ -11,7 +11,7 @@
 .userList-title {
   color: white;
   font-weight: bold;
-  margin: 0;
+  margin: 5px;
   padding: 10;
 }
 .userList-ul {
@@ -27,6 +27,5 @@
 .userList-online {
   display: inline-block;
   color: green;
-  font-size: 60;
-  margin: -48.89px 0px 0px 0px;
+  margin: 5px 8px 5px -29px;
 }

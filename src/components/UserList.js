@@ -4,7 +4,7 @@ import './styles/UserList.css';
 function UserList({ userlist }) {
   const users = userlist.map((user, key) => (
     <li className='userList-li' key={key}>
-      <p className='userList-online'>.</p>
+      <p className='userList-online'>🟢</p>
 
       {user.username}
     </li>

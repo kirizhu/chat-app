@@ -1,8 +1,9 @@
 .chat-title {
   color: white;
   font-weight: bold;
-  margin: 0;
+  margin: auto;
   padding: 10;
+  margin-left: 25px;
 }
 .chat-input {
   position: fixed;

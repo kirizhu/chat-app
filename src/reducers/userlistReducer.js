@@ -1,3 +1,4 @@
+import { ADD_USERLIST } from '../actions';
 export default function reducer(
   state = {
     userlist: [],
@@ -5,7 +6,7 @@ export default function reducer(
   action
 ) {
   switch (action.type) {
-    case 'USERLIST_ADD': {
+    case ADD_USERLIST: {
       return {
         ...state,
         userlist: action.payload,

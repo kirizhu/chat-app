@@ -20,27 +20,32 @@ class AddUser extends React.Component {
 
   render() {
     return (
-      <form
-        className='addUser-form'
-        onSubmit={(event) => this.handleClick(event)}
-      >
-        <p className='addUser-title'>Username</p>
+      <div>
+        <form
+          className='addUser-form'
+          onSubmit={(event) => this.handleClick(event)}
+        >
+          <img
+            src={require('../pngegg.png')}
+            class='img-fluid'
+            alt='Responsive image'
+          ></img>
 
-        <input
-          className='addUser-input'
-          name='username'
-          type='text'
-          placeholder='Pick a username'
-          value={this.state.username}
-          //TODO: fix this
-          onChange={this.handleChange.bind(this)}
-          autoFocus
-        />
+          <input
+            className='addUser-input'
+            name='username'
+            type='text'
+            placeholder='Pick a username'
+            value={this.state.username}
+            onChange={this.handleChange.bind(this)}
+            autoFocus
+          />
 
-        <button type='submit' className='btn btn-primary addUser-button'>
-          Join chat
-        </button>
-      </form>
+          <button type='submit' className='btn btn-primary addUser-button'>
+            Join chat
+          </button>
+        </form>
+      </div>
     );
   }
 }

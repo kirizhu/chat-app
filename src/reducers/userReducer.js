@@ -1,3 +1,4 @@
+import { ADD_USERNAME } from '../actions';
 export default function reducer(
   state = {
     username: null,
@@ -5,7 +6,7 @@ export default function reducer(
   action
 ) {
   switch (action.type) {
-    case 'USERNAME_ADD': {
+    case ADD_USERNAME: {
       return {
         ...state,
         username: action.payload,
